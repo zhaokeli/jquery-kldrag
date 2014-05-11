@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../jquery-1.8.1.min.js" type="text/javascript"></script>
+<script src="../jquery-kldrag.js" type="text/javascript"></script>
+<title>无标题文档</title>
+<style>
+*{ margin:0px; padding:0px;}
+.box{ width:200px; height:200px; background:#f00;}
+.cl:after {content:"";visibility: hidden;display: block;font-size: 0;content: &quot; &quot;;clear: both;height: 0;}
+* html .cl           { zoom: 1; } /* IE6 */
+*:first-child+html .cl{ zoom: 1; } /* IE7 */
+.diy{ width:100%; height:30px; border:dashed 1px #ccc;}
+ul,li{list-style:none;}
+.dragblock{}
+.dragblock .dragitem{ border:solid 1px #ccc; margin:10px;height:50px; width:300px;}
+ul{float:left; margin:10px;}
+</style>
+</head>
+
+<body>
+<div class="dragblock">
+<ul class="cl">
+<li class="dragitem cl">111111111</li>
+<li class="dragitem cl">222222222</li>
+<li class="dragitem cl">333333333</li>
+<li class="dragitem cl">444444444</li>
+<li class="dragitem cl">555555555</li>
+<li class="dragitem cl">666666666</li>
+<li class="dragitem cl">777777777</li>
+</ul>
+<ul class="cl">
+<li class="dragitem cl">111111111</li>
+<li class="dragitem cl">222222222</li>
+<li class="dragitem cl">333333333</li>
+<li class="dragitem cl">444444444</li>
+<li class="dragitem cl">555555555</li>
+<li class="dragitem cl">666666666</li>
+<li class="dragitem cl">777777777</li>
+</ul>
+</div>
+<script>
+$(function(){
+	$('.dragblock').kldrag({},function(){});
+	});
+</script>
+</body>
+</html>
